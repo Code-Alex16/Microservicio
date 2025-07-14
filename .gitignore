@@ -1,6 +1,6 @@
-Categorias-Service/node_modules
-Contactos-Service/node_modules
-Uusario-Service/node_modules
-Categorias-Service/.env
-Contactos-Service/.env
-Uusario-Service/.env
+/Categorias-Service/node_modules
+/Contactos-Service/node_modules
+/Usuario-Service/node_modules
+/Categorias-Service/.env
+/Contactos-Service/.env
+/Usuario-Service/.env
