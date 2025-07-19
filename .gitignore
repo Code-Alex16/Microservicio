@@ -1,6 +1,8 @@
 /Categorias-Service/node_modules
 /Contactos-Service/node_modules
 /Usuario-Service/node_modules
+/api-gateway/node_modules
+/api-gateway/.env
 /Categorias-Service/.env
 /Contactos-Service/.env
 /Usuario-Service/.env
