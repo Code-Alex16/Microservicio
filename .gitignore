@@ -6,3 +6,8 @@
 /Categorias-Service/.env
 /Contactos-Service/.env
 /Usuario-Service/.env
+/agenda-contactos-frontend/.vscode
+/agenda-contactos-frontend/node_modules
+/agenda-contactos-frontend/README.md
+/agenda-contactos-frontend/.angular
+/agenda-contactos-frontend/.gitignore
