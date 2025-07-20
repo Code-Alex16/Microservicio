@@ -1,0 +1,24 @@
+<div class="contactos-container">
+  <h2>Mis Contactos</h2>
+
+  <button class="add-button" [routerLink]="['/contactos/nuevo']">Nuevo Contacto</button>
+
+  <p *ngIf="message" class="message">{{ message }}</p>
+
+  <div *ngIf="contactos.length === 0 && !message" class="no-contacts">
+    No tienes contactos aún. ¡Añade uno!
+  </div>
+
+  <div *ngIf="contactos.length > 0" class="contact-cards">
+    <div class="contact-card" *ngFor="let contacto of contactos">
+      <h3>{{ contacto.nombre }} {{ contacto.apellido }}</h3>
+      <p><strong>Teléfono:</strong> {{ contacto.telefono }}</p>
+      <p *ngIf="contacto.correo"><strong>Correo:</strong> {{ contacto.correo }}</p>
+      <p *ngIf="contacto.id_categoria"><strong>Categoría ID:</strong> {{ contacto.id_categoria }}</p>
+      <div class="card-actions">
+        <button class="edit-button" (click)="editContacto(contacto.id_contacto)">Editar</button>
+        <button class="delete-button" (click)="deleteContacto(contacto.id_contacto)">Eliminar</button>
+      </div>
+    </div>
+  </div>
+</div>

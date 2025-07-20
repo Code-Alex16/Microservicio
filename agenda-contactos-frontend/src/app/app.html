@@ -1,0 +1,20 @@
+<nav class="navbar">
+  <div class="navbar-brand">
+    <a routerLink="/" class="app-title">Agenda de Contactos</a>
+  </div>
+  <div class="navbar-links">
+    <ng-container *ngIf="!authService.isLoggedIn()">
+      <a routerLink="/login" class="nav-link">Iniciar Sesión</a>
+      <a routerLink="/registro" class="nav-link">Registrarse</a>
+    </ng-container>
+
+    <ng-container *ngIf="authService.isLoggedIn()">
+      <a routerLink="/contactos" class="nav-link">Mis Contactos</a>
+      <button (click)="logout()" class="logout-button">Cerrar Sesión</button>
+    </ng-container>
+  </div>
+</nav>
+
+<div class="main-content">
+  <router-outlet></router-outlet>
+</div>

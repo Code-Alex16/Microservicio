@@ -1,0 +1,43 @@
+<div class="form-container">
+  <h2>{{ isEditing ? 'Editar Contacto' : 'Nuevo Contacto' }}</h2>
+
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" [(ngModel)]="contacto.nombre" name="nombre" required>
+    </div>
+
+    <div class="form-group">
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" [(ngModel)]="contacto.apellido" name="apellido">
+    </div>
+
+    <div class="form-group">
+      <label for="telefono">Teléfono:</label>
+      <input type="text" id="telefono" [(ngModel)]="contacto.telefono" name="telefono" required>
+    </div>
+
+    <div class="form-group">
+      <label for="correo">Correo:</label>
+      <input type="email" id="correo" [(ngModel)]="contacto.correo" name="correo">
+    </div>
+
+    <div class="form-group">
+      <label for="categoria">Categoría:</label>
+      <select id="categoria" [(ngModel)]="contacto.id_categoria" name="id_categoria">
+        <option [ngValue]="undefined">Seleccionar Categoría (Opcional)</option>
+        <option *ngFor="let categoria of categorias" [ngValue]="categoria.id_categoria">
+          {{ categoria.categoria }}
+        </option>
+      </select>
+      <p *ngIf="categorias.length === 0" class="info-message">No hay categorías disponibles. Crea algunas en el backend o en el futuro módulo de categorías.</p>
+    </div>
+
+    <p *ngIf="message" class="message error">{{ message }}</p>
+
+    <div class="form-actions">
+      <button type="submit">{{ isEditing ? 'Guardar Cambios' : 'Crear Contacto' }}</button>
+      <button type="button" class="cancel-button" (click)="router.navigate(['/contactos'])">Cancelar</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,103 @@
+.form-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 2em;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #34495e;
+      font-size: 1.1em;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select {
+      width: calc(100% - 24px); // Ajusta por padding
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1em;
+      box-sizing: border-box; // Incluye padding y borde en el ancho
+      transition: border-color 0.3s ease;
+
+      &:focus {
+        border-color: #007bff;
+        outline: none;
+      }
+    }
+    select {
+        appearance: none; // Elimina estilos nativos de select
+        background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007bff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13%205.7l-130%20129.5L18.4%2075.1a17.6%2017.6%200%200%200-25.5%2023.7l142.7%20142.7a17.6%2017.6%200%200%0025.5%200L287%2093.1a17.6%2017.6%200%200%200%200-23.7z%22%2F%3E%3C%2Fsvg%3E');
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-size: 12px;
+        padding-right: 30px; // Espacio para la flecha
+    }
+  }
+
+  .info-message {
+    font-size: 0.9em;
+    color: #6c757d;
+    margin-top: 5px;
+  }
+
+  .message {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    &.error {
+      background-color: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+  }
+
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 30px;
+
+    button {
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.1em;
+      transition: background-color 0.3s ease;
+
+      &[type="submit"] {
+        background-color: #007bff;
+        color: white;
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+
+      &.cancel-button {
+        background-color: #6c757d;
+        color: white;
+        &:hover {
+          background-color: #5a6268;
+        }
+      }
+    }
+  }
+}
